@@ -1,14 +1,9 @@
 package No120583;
 
+import java.util.Arrays;
+
 public class Solution {
     public int solution(int[] array, int n) {
-        int answer = 0;
-
-        for (int data : array) {
-            if (data == n) {
-                answer++;
-            }
-        }
-        return answer;
+        return (int) Arrays.stream(array).filter(i -> i == n).count();
     }
 }
